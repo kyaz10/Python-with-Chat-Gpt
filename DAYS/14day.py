@@ -69,4 +69,3 @@ book = {
 }
 
 print_book(book)
-
