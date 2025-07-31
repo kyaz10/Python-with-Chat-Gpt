@@ -1,31 +1,9 @@
-student = {
-    'name': 'Kyaz', 
-    'grade': 9
-}
+sales_week1 = {'Mon': 100, 'Tue': 150, 'Wed': 130}
+sales_week2 = {'Mon': 120, 'Tue': 140, 'Wed': 135}
 
-print(student['name'])
-student['grade'] = 10
-student['school'] = 'number1'
-print(student)
+# Объединяем суммы по дням
+total_sales = {}
+for day in sales_week1:
+    total_sales[day] = sales_week1[day] + sales_week2.get(day, 0)
 
-
-print()
-
-my_info = {
-    "nickname": "Tiger",
-    "age": 15
-}
-
-# Выводим имя
-print(my_info["nickname"])  # Tiger
-
-# Обновляем возраст
-my_info["age"] = 16
-
-# Добавляем новый ключ
-my_info["goal"] = "Become Python pro"
-
-# Удаляем ник
-del my_info["nickname"]
-
-print(my_info)
+print(total_sales)
