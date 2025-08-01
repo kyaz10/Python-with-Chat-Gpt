@@ -21,17 +21,19 @@ scores = {
 }
 best = max(scores, key = scores.get)
 print(f"Лучший студент: {best}")
-# Лучший студент: Nurlan (72)
 
 
 sales_week1 = {'Mon': 100, 'Tue': 150, 'Wed': 130}
 sales_week2 = {'Mon': 120, 'Tue': 140, 'Wed': 135}
 
-besk = max(sales_week1, key = sales_week1.get)
-belk = max(sales_week2, key = sales_week2.get)
-bin = besk + belk
-print(f'Лучший день: {besk}')
+total_sales = {}
+for day in sales_week1:
+    total_sales[day] = sales_week1[day] + sales_week2.get(day, 0)
 
+best_day = max(total_sales, key=total_sales.get)
+print(f'Лучший день: {best_day} ({total_sales[best_day]})')
+
+print()
 
 
 grades = {
